@@ -1,0 +1,25 @@
+.buttonLink {
+  color: #222d34;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  padding: 11px 8px;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.buttonLink:hover:enabled {
+  font-weight: 700;
+}
+.buttonLink:active {
+  font-weight: 700;
+  color: #9db0bd;
+}
+.buttonLink:focus,
+.buttonLink:focus-visible {
+  outline: none;
+}
+.buttonLink:disabled {
+  cursor: not-allowed;
+  color: #9db0bd;
+}

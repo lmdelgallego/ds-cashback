@@ -1,0 +1,26 @@
+.button {
+  transition: all 0.3s ease;
+  color: black;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 500;
+  background: #fae159;
+}
+.button:hover:enabled {
+  opacity: 0.6;
+}
+
+.button:disabled {
+  background: #dce5eb;
+  color: #9db0bd;
+  cursor: not-allowed;
+}
+.button:focus,
+.button:focus-visible {
+  outline: none;
+}
