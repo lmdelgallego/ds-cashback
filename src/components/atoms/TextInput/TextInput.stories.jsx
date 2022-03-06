@@ -25,7 +25,6 @@ const Template = (args) => <TextInput name='input' {...args} />;
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Default.args = {
-  name: 'input',
   label: 'Text Input',
-  placeholder: 'TextInput',
+  placeholder: '',
 };

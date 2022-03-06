@@ -3,22 +3,14 @@ import PropTypes from 'prop-types';
 import { useField } from 'formik';
 import './TextInput.css';
 
-export const TextInput = ({
-  label,
-  name = 'input',
-  style,
-  clearButton = true,
-  locale = 'en',
-  ...props
-}) => {
-  console.log('TextInput.jsx: props: ', name);
-  const [field, meta, helpers] = useField(name, props);
+export const TextInput = ({ label, style, clearButton = true, locale = 'en', ...props }) => {
+  const [field, meta, helpers] = useField(props.name, props);
 
   return (
     <div className='inputText'>
       <div className='inputContainer'>
         <label>{label}</label>
-        <input name={name} {...field} {...props} />
+        <input name={props.name} {...field} {...props} />
         {clearButton && (
           <div
             className={`clearButton ${locale === 'ar' ? 'clearButtonRtl' : ''}`}
@@ -36,7 +28,6 @@ export const TextInput = ({
 };
 
 TextInput.propTypes = {
-  name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   style: PropTypes.object,
   clearButton: PropTypes.bool,
