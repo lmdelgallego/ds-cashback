@@ -7,5 +7,6 @@ import { TextInput } from './components/atoms/TextInput';
 import { Spinner } from './components/atoms/Spinner';
 
 import { Header } from './components/molecules/Header';
+import { Message } from './components/molecules/Message';
 
-export { Button, ButtonLink, CheckBox, Spinner, TextInput, Header };
+export { Button, ButtonLink, CheckBox, Spinner, TextInput, Header, Message};
