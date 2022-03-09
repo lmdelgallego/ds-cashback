@@ -12,5 +12,6 @@ module.exports = {
   "framework": "@storybook/react",
   "core": {
     "builder": "webpack5"
-  }
+  },
+  "staticDir": [ "./scr/assets/icons", "./scr/assets/images", "./scr/assets/fonts"],
 }

@@ -4,4 +4,6 @@ import { CheckBox } from './components/atoms/Checkbox';
 import { TextInput } from './components/atoms/TextInput';
 import { Spinner } from './components/atoms/Spinner';
 
-export { Button, ButtonLink, CheckBox, Spinner, TextInput };
+import { Header } from './components/molecules/Header';
+
+export { Button, ButtonLink, CheckBox, Spinner, TextInput, Header };

@@ -34,7 +34,7 @@ export default [
       commonjs(),
       external(),
       resolve(),
-      terser(),
+      // terser(),
     ],
     external: Object.keys(pkg.peerDependencies),
   },

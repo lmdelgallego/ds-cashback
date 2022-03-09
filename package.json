@@ -7,13 +7,13 @@
   "scripts": {
     "start": "react-scripts start",
     "compile:post": "npm-prepare-dist",
-    "build": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__ && rollup -c",
+    "build": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__ && babel src/public --out-dir dist --copy-files && rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006 -s src/public",
     "build-storybook": "build-storybook -s public",
-    "build-lib": "npm run clean && rollup -c"
+    "build-lib": "npm run clean && babel src/public --out-dir dist --copy-files  && rollup -c"
   },
   "peerDependencies": {
     "formik": "^2.2.9",
