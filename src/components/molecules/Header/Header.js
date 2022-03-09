@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css';
+import logoImg from '../../../public/assets/images/logo-lucky.png';
+import languageImg from '../../../public/./assets/icons/arabe.svg';
 
 export const Header = ({ locale = 'en', onClick}) => {
   return (
@@ -7,7 +9,7 @@ export const Header = ({ locale = 'en', onClick}) => {
       <header className='header'>
         <div className='header__container'>
           <img
-            src='./assets/images/logo-lucky.png'
+            src={logoImg}
             alt='lucky'
             width={112}
             height={32}
@@ -20,7 +22,7 @@ export const Header = ({ locale = 'en', onClick}) => {
               'English'
             ) : (
               <div className='header__btnLanguage__img'>
-                <img src='./assets/icons/arabe.svg' alt='lucky' layout='fill' />
+                <img src={languageImg} alt='lucky'/>
               </div>
             )}
           </div>

@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
+import image from '@rollup/plugin-image';
 import { terser } from 'rollup-plugin-terser';
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
@@ -21,6 +22,7 @@ export default [
       },
     ],
     plugins: [
+      image(),
       postcss({
         plugins: [],
         minimize: true,
@@ -34,7 +36,7 @@ export default [
       commonjs(),
       external(),
       resolve(),
-      // terser(),
+      terser(),
     ],
     external: Object.keys(pkg.peerDependencies),
   },
