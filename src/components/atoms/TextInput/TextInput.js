@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useField } from 'formik';
 import './TextInput.css';
+import img from '../../../assets/icons/cross.svg';
 
 export const TextInput = ({ label, style, clearButton = true, locale = 'en', ...props }) => {
   const [field, meta, helpers] = useField(props.name, props);
@@ -18,7 +19,7 @@ export const TextInput = ({ label, style, clearButton = true, locale = 'en', ...
             hidden={!field.value}
             onClick={() => helpers.setValue('')}
           >
-            <img alt='Clear' src={'/icons/cross.svg'} layout='fill' />
+            <img alt='Clear' src={img} />
           </div>
         )}
         {meta.touched && meta.error ? <div className='inputError'>{meta.error}</div> : null}

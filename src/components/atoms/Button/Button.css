@@ -1,3 +1,4 @@
+@import url('../../../fonts');
 .button {
   transition: all 0.3s ease;
   color: black;
@@ -7,7 +8,7 @@
   font-size: 1rem;
   cursor: pointer;
   width: 100%;
-  font-family: inherit;
+  font-family: 'font-family-base', sans-serif;
   font-weight: 500;
   background: #fae159;
 }

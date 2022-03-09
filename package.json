@@ -1,19 +1,21 @@
 {
   "name": "ds-cashback",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
   "main": "dist/index.cjs.js",
+  "style": "dist/index.css",
   "module": "dist/index.esm.js",
   "scripts": {
     "start": "react-scripts start",
     "compile:post": "npm-prepare-dist",
-    "build": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__ && babel src/public --out-dir dist --copy-files && rollup -c",
+    "build": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__ && babel src/assets --out-dir dist/assets --copy-files && rollup -c",
+    "css": "css-minify -d /src",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
-    "storybook": "start-storybook -p 6006 -s src/public",
+    "storybook": "start-storybook -p 6006 -s src/assets",
     "build-storybook": "build-storybook -s public",
-    "build-lib": "npm run clean && babel src/public --out-dir dist --copy-files  && rollup -c"
+    "build-lib": "npm run clean && babel src/assets --out-dir dist/assets --copy-files  && rollup -c"
   },
   "peerDependencies": {
     "formik": "^2.2.9",
@@ -41,6 +43,7 @@
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "cross-env": "^7.0.3",
+    "css-minify": "^2.0.0",
     "formik": "^2.2.9",
     "npm-prepare-dist": "^0.4.0",
     "prop-types": "^15.8.1",
@@ -49,6 +52,7 @@
     "rollup": "^2.69.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",

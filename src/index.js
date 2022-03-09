@@ -1,3 +1,5 @@
+import './index.css';
+
 import { Button } from './components/atoms/Button';
 import { ButtonLink } from './components/atoms/ButtonLink';
 import { CheckBox } from './components/atoms/Checkbox';

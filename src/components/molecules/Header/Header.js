@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
-import logoImg from '../../../public/assets/images/logo-lucky.png';
-import languageImg from '../../../public/./assets/icons/arabe.svg';
+import logoImg from '../../../assets/images/logo-lucky.png';
+import languageImg from '../../../assets/icons/arabe.svg';
 
 export const Header = ({ locale = 'en', onClick}) => {
   return (
